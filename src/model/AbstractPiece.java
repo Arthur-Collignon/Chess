@@ -5,8 +5,8 @@ public abstract class AbstractPiece implements Pieces {
     private Couleur couleur;
     private Coord coord;
 
-    public AbstractPiece(char name, Couleur couleur, Coord coord) {
-        this.name = name;
+    AbstractPiece(Couleur couleur, Coord coord)
+    {
         this.couleur = couleur;
         this.coord = coord;
     }
@@ -38,9 +38,14 @@ public abstract class AbstractPiece implements Pieces {
     }
 
     public java.lang.String toString() {
-
-        return null;
+        return "Piece " + name + " : " + coord;
     }
 
     public abstract boolean isMoveOk(int xFinal, int yFinal);
+
+
 }
+
+
+
+

@@ -5,12 +5,15 @@ public class Tour extends AbstractPiece  {
     private Couleur couleur;
     private Coord coord;
 
-    public Tour(char name, Couleur couleur, Coord coord) {
-        super(name, couleur, coord);
+    public Tour(Couleur couleur, Coord coord) {
+        super(couleur, coord);
     }
 
     public boolean isMoveOk(int xFinal, int yFinal) {
-
-        return false;
+        boolean moveok = false;
+        if (coord.x == xFinal || coord.y == yFinal) {
+            moveok = true;
+        }
+        return moveok;
     }
 }
