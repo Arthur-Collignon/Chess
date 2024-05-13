@@ -195,13 +195,14 @@ public class ChessGameGUI extends JFrame implements MouseListener, MouseMotionLi
 	 */
 	private JLabel newImage(int i, int j) {
 		JLabel pieceGuiLabel = null;
-		if (ChessImageProvider.isCoordOK(i, j)) {
+		/*if (ChessImageProvider.isCoordOK(i, j)) {
 			String type = ChessImageProvider.getType(i, j);
 			Couleur couleur = ChessImageProvider.getCouleur(i, j);
 			pieceGuiLabel = new JLabel(
 					new ImageIcon(ChessImageProvider.getImageFile(
 							type, couleur)));
 		}
+		*/
 		return pieceGuiLabel;
 	}
 
